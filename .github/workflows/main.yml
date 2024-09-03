@@ -123,7 +123,7 @@ jobs:
             aws_default_region_secret_name: STAGING_AWS_DEFAULT_REGION
     steps:
       # Deploy to S3 bucket.
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-${{ matrix.deploy_env }}
           path: ./public
